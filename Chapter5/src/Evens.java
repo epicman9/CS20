@@ -1,6 +1,6 @@
 /*
 
-Program: Evens.java          Last Date of this Revision: March 3rd, 2022
+Program: Evens.java          Last Date of this Revision: March 4th, 2022
 
 Purpose: Create an evens application that displays the even numbers between 1 and 20, inclusive.
 
@@ -12,11 +12,30 @@ Course: Computer Programming 20
 */
 public class Evens 
 {
-
 	public static void main(String[] args) 
 	{
+		for(int i = 2; i <= 20;)
+		{
+			System.out.println(i);
 
-
+			i = i + 2;
+		}
 	}
 
 }
+/* Screen Dump
+  
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+
+
+*/
