@@ -10,6 +10,20 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/*
+
+Program: PrimeNumberGUI.java          Last Date of this Revision: March 17th, 2022
+
+Purpose: Create a PrimeNumber application that has a GUI where you can enter any number and it will tell you if it is prime.
+
+Author: Ewan Brady
+School: CHHS
+Course: Computer Programming 20
+  
+
+*/
+
+
 public class PrimeNumberGUI {
 
 	private JFrame frame;
@@ -41,48 +55,74 @@ public class PrimeNumberGUI {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
+	public static boolean isPrime(int num) 
+	{
+	
+		boolean bruv;
+		
+		if(num % 2 != 0 && num % 3 != 0 && num % 5 != 0 && num % 7 != 0 && num % 11 != 0 || num == 2 || num == 3 || num == 5 || num == 7 || num == 9 || num == 11) 
+		{
+			bruv = true;
+		}
+		else 
+		{
+			bruv = false;
+		}
+		
+		return bruv;
+	}
+	
+	
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 369, 221);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel Back = new JPanel();
+		Back.setBounds(0, 0, 357, 186);
 		Back.setBackground(Color.BLACK);
-		Back.setBounds(0, 0, 424, 231);
 		frame.getContentPane().add(Back);
 		Back.setLayout(null);
 		
 		JLabel tex = new JLabel("Enter an integer: ");
 		tex.setForeground(Color.ORANGE);
 		tex.setBackground(Color.WHITE);
-		tex.setBounds(80, 15, 89, 14);
+		tex.setBounds(53, 15, 100, 14);
 		Back.add(tex);
 		
+		JLabel out = new JLabel("");
+		out.setForeground(Color.ORANGE);
+		out.setBounds(59, 99, 208, 42);
+		Back.add(out);
+		
 		JButton but = new JButton("Enter");
+		
 		but.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				
 				
+				int num = 0;
 				
+				num = (int)Integer.parseInt(inp.getText());
+				//System.out.println("The integer is prime: " + isPrime(num));				
 				
-				
+				out.setText("The integer is prime: " + isPrime(num));
+
 			}
 		});
 		but.setBackground(Color.ORANGE);
-		but.setBounds(261, 11, 89, 23);
+		but.setBounds(242, 11, 89, 23);
 		Back.add(but);
 		
 		inp = new JTextField();
-		inp.setBounds(165, 12, 86, 20);
+		inp.setBounds(146, 12, 86, 20);
 		Back.add(inp);
 		inp.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Output");
-		lblNewLabel.setForeground(Color.ORANGE);
-		lblNewLabel.setBounds(180, 100, 71, 14);
-		Back.add(lblNewLabel);
+		
 	}
 }

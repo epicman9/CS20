@@ -28,14 +28,14 @@ public class RandomNumber
 		System.out.println("Enter the maximum value: ");
 		max = input.nextDouble();
 		
-		int finalnum = 0;
-		boolean printfinalnum = true;
+		int finalnum = 0; //the final random number to be outputted
+		boolean printfinalnum = true; //bool for some cases where finalnum should not be printed
 		
-		if(Math.abs(max) < 1 && Math.abs(min) < 1 && min < max && min < 0 && max > 0) 
+		if(Math.abs(max) < 1 && Math.abs(min) < 1 && min < max && min < 0 && max > 0) //checks if between 1 and -1
 		{
 			finalnum = 0; //I have this section in here because in this scenario the only integer between them is 0
 		}
-		else if(min < max && max >= 0 && (Math.floor(max) != Math.floor(min)))
+		else if(min < max && max >= 0 && (Math.floor(max) != Math.floor(min))) //checks if max is greater than min, that max is above zero, and that max and min dont round down to the same integer
 		{
 			finalnum = (int)((max - min + 1) * Math.random() + min);
 		}

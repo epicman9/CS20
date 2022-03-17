@@ -20,44 +20,44 @@ public class PrintingCost
 	{
 		Scanner input = new Scanner(System.in);
 		
-		NumberFormat nf = NumberFormat.getNumberInstance();
+		NumberFormat nf = NumberFormat.getNumberInstance(); //fixes issue where there would be lots of 0s at end by making it go to the hundredth
 		
-		boolean alltoplan = true;
-		int num;
+		boolean alltoplan = true; //bool to check if negative number of sheets of paper
+		int num; //number of sheets of paper
 		double totalcost = 0;
 		double costpercopy = 0;
 		
 		System.out.println("Enter the number of copies to be printed: ");
 		num = input.nextInt();
 		
-		if(num < 0) 
+		if(num < 0) //checks if negative amount of paper, if so a seprate message will be printed when program ends
 		{
 			alltoplan = false;
 		}
-		if(num < 100) 
+		if(num < 100) //checks if less than 100 sheets of paper
 		{
-			costpercopy = 0.3;
-			totalcost = num * costpercopy;
+			costpercopy = 0.3; //sets cost per paper to 0.3 because less than 1000 sheets of paper
+			totalcost = num * costpercopy; //calculates total cost for paper
 		}
-		else if(num < 500)
+		else if(num < 500) //checks if less than 500 sheets of paper
 		{
-			costpercopy = 0.28;
-			totalcost = num * costpercopy;
+			costpercopy = 0.28; //sets cost per paper to 0.28 because less than 500 sheets of paper
+			totalcost = num * costpercopy; //calculates total cost for paper
 		}
-		else if(num < 750)
+		else if(num < 750) //checks if less than 750 sheets of paper
 		{
-			costpercopy = 0.27;
-			totalcost = num * costpercopy;
+			costpercopy = 0.27; //sets cost per paper to 0.27 because less than 750 sheets of paper
+			totalcost = num * costpercopy; //calculates total cost for paper
 		}
-		else if(num < 1001)
+		else if(num < 1001) //checks if less than 1001 sheets of paper
 		{
-			costpercopy = 0.26;
-			totalcost = num * costpercopy;
+			costpercopy = 0.26; //sets cost per paper to 0.26 because less than 1001 sheets of paper
+			totalcost = num * costpercopy; //calculates total cost for paper
 		}
 		else
 		{
-			costpercopy = 0.25;
-			totalcost = num * costpercopy;
+			costpercopy = 0.25; //sets cost per paper to 0.3 because greater than or equal to 1001 sheets of paper
+			totalcost = num * costpercopy; //calculates total cost for paper
 		}
 		
 		if(alltoplan == true) 

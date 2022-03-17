@@ -23,27 +23,27 @@ public class Grade
 		System.out.println("Enter the percentage: ");
 		num = input.nextDouble();
 
-		if(num < 60 && num > 0) 
+		if(num < 60 && num > 0)  //check for range where num is a grade of F
 		{
 			System.out.println("The corresponding letter grade is: F");
 		}
-		else if(num < 70 && num > 0) 
+		else if(num < 70 && num > 0) //check for range where num is a grade of D 
 		{
 			System.out.println("The corresponding letter grade is: D");
 		}
-		else if(num < 80 && num > 0)
+		else if(num < 80 && num > 0) //check for range where num is a grade of C
 		{
 			System.out.println("The corresponding letter grade is: C");
 		}
-		else if(num < 90 && num > 0)
+		else if(num < 90 && num > 0) //check for range where num is a grade of B
 		{
 			System.out.println("The corresponding letter grade is: B");
 		}
-		else if(num <= 100 && num > 0)
+		else if(num <= 100 && num > 0) //check for range where num is a grade of A
 		{
 			System.out.println("The corresponding letter grade is: A");
 		}
-		else
+		else //If it is in none of these ranges tell user
 		{
 			System.out.println("Not on the grading scale, must be between 0-100");
 		}

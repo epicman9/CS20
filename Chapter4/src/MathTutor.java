@@ -18,73 +18,73 @@ public class MathTutor
 	{
 		Scanner input = new Scanner(System.in);
 		
-		int num1 = (int)((10 - 1 + 1) * Math.random() + 1);
-		int num2 = (int)((10 - 1 + 1) * Math.random() + 1);
-		int operator = (int)((4 - 1 + 1) * Math.random() + 1);
+		int num1 = (int)((10 - 1 + 1) * Math.random() + 1); //generate first number from 1 to 10
+		int num2 = (int)((10 - 1 + 1) * Math.random() + 1); //generate second number from 1 to 10
+		int operator = (int)((4 - 1 + 1) * Math.random() + 1); //generate a number from 1 to 4 to decide the operator in between two random nums
 		
 		double num3 = 0;
 		
-		if(operator == 1) 
+		if(operator == 1) //third randomnum came out as 1, so operator is addition
 		{
 			System.out.println("What is " + num1 + " + " + num2);
 			num3 = input.nextInt();
 			
-			if(num3 == (num1 + num2)) 
+			if(num3 == (num1 + num2)) //checks if user got answer correct
 			{
 				System.out.println("Correct!");
 			}
-			else 
+			else //tells user they got answer incorrect
 			{
 				System.out.println("Incorrect, the answer is " + (num1 + num2));
 			}
 		}
-		else if(operator == 2) 
+		else if(operator == 2)  //third randomnum came out as 2, so operator is subtraction
 		{
 			System.out.println("What is " + num1 + " - " + num2);
 			num3 = input.nextInt();
 			
-			if(num3 == (num1 - num2)) 
+			if(num3 == (num1 - num2)) //checks if user got answer correct
 			{
 				System.out.println("Correct!");
 			}
-			else 
+			else //tells user they got answer incorrect
 			{
 				System.out.println("Incorrect, the answer is " + (num1 - num2));
 			}
 		}
-		else if(operator == 3) 
+		else if(operator == 3) //third randomnum came out as 3, so operator is multiplication
 		{
 			System.out.println("What is " + num1 + " * " + num2);
 			num3 = input.nextInt();
 			
-			if(num3 == (num1 * num2)) 
+			if(num3 == (num1 * num2)) //checks if user got answer correct
 			{
 				System.out.println("Correct!");
 			}
-			else 
+			else //tells user they got answer incorrect
 			{
 				System.out.println("Incorrect, the answer is " + (num1 * num2));
 			}
 		}
-		else if(operator == 4) 
+		else if(operator == 4)  //third randomnum came out as 4, so operator is division
 		{
-			if(num1 % num2 != 0) //this loop is here because sometimes the two numbers that dont evenly divide would be generated..
+			if(num1 % num2 != 0) //this loop is here because sometimes the two numbers that dont evenly divide would be generated, this re generates the random numbers until they evenly divide.
 			{
 				for(int whydoIhavethavethisnumber; num1 % num2 != 0;) 
 				{
-					num1 = (int)((10 - 1 + 1) * Math.random() + 1);
-					num2 = (int)((10 - 1 + 1) * Math.random() + 1);
+					num1 = (int)((10 - 1 + 1) * Math.random() + 1); //re generate first random number
+					num2 = (int)((10 - 1 + 1) * Math.random() + 1); //re generate second random number
 				}
 			}
 			
 			System.out.println("What is " + num1 + " / " + num2);
 			num3 = input.nextInt();
 			
-			if(num3 == (num1 / num2)) 
+			if(num3 == (num1 / num2)) //checks if user got answer correct
 			{
 				System.out.println("Correct!");
 			}
-			else 
+			else //tells user they got answer incorrect
 			{
 				System.out.println("Incorrect, the answer is " + (num1 / num2));
 			}

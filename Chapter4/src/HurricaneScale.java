@@ -25,27 +25,27 @@ public class HurricaneScale
 		num = input.nextInt();
 				
 		
-		if(num == 1) 
+		if(num == 1) //check if category 1
 		{
 			System.out.println("Wind speeds of 74-95 mph, 64-82 kt, or 119-153 km/hr ");
 		}
-		else if(num == 2) 
+		else if(num == 2)  //check if category 2
 		{
 			System.out.println("Wind speeds of 96-110 mph, 83-95 kt, or 154-177 km/hr ");
 		}
-		else if(num == 3) 
+		else if(num == 3) //check if category 3
 		{
 			System.out.println("Wind speeds of 111-130 mph, 96-113 kt, or 178-209 km/hr ");
 		}
-		else if(num == 4) 
+		else if(num == 4) //check if category 4
 		{
 			System.out.println("Wind speeds of 131-155 mph, 114-135 kt, or 210-249 km/hr ");
 		}
-		else if(num == 5) 
+		else if(num == 5) //check if category 5
 		{
 			System.out.println("Wind greater than 155 mph, 135 kt, or 249 km/hr ");
 		}
-		else 
+		else //tell user out of range
 		{
 			System.out.println("The scale is from 1-5.");		
 		}
