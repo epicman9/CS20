@@ -37,21 +37,21 @@ public class RandomNumber
 		}
 		else if(min < max && max >= 0 && (Math.floor(max) != Math.floor(min))) //checks if max is greater than min, that max is above zero, and that max and min dont round down to the same integer
 		{
-			finalnum = (int)((max - min + 1) * Math.random() + min);
+			finalnum = (int)((max - min + 1) * Math.random() + min); //calculates random num, this version only works if the if value it is in is true so that is why its in an if value
 		}
-		else if(max <= 0 && min < max && (Math.floor(max) != Math.floor(min))) 
+		else if(max <= 0 && min < max && (Math.floor(max) != Math.floor(min))) //checks if the max is less than or equal to zero, that the max is above the min, and that the max and min dont round down to the same integer
 		{
-			finalnum = (int)((max - min - 1) * Math.random() + min);
+			finalnum = (int)((max - min - 1) * Math.random() + min); //calculates random num, this version only works if the if value it is in is true so that is why its in an if value
 		}
-		else if((Math.floor(max) == Math.floor(min)))
+		else if((Math.floor(max) == Math.floor(min))) //checks if the max and min round down to the same digit, if so there is no integer between them
 		{
 			System.out.println("Must have an integer between minimum and maximum");
-			printfinalnum = false;
+			printfinalnum = false; //informs user that no integer, tells program to not display result. 
 		}
-		else 
+		else //only alternative left is max is less than min
 		{
 			System.out.println("Maximum must be greater than minimum."); 
-			printfinalnum = false;
+			printfinalnum = false; //informs user that max is less than min, tells program to not display result. 
 		}
 		
 		
@@ -68,7 +68,7 @@ public class RandomNumber
 		*/
 		if(finalnum == 0 && min > 0 || finalnum == 0 && max < 0) 
 		{
-			for(int fixingnum = 0; finalnum == 0;) 
+			for(int fixingnum = 0; finalnum == 0;) //continues to generate new random numbers until the random number is correct
 			{
 				if(min < max && max >= 1 && (Math.floor(max) != Math.floor(min))) 
 				{
@@ -85,7 +85,7 @@ public class RandomNumber
 			}
 		}
 		
-		if(printfinalnum == true) 
+		if(printfinalnum == true) //unless told otherwise earlier in program, prints the random number result
 		{
 			System.out.println("Random number: " + finalnum);			
 		}

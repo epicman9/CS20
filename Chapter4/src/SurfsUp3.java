@@ -25,26 +25,25 @@ public class SurfsUp3
 		System.out.println("Enter wave height: ");
 		num = input.nextDouble();
 		
-		if(num >= 6) 
+		if(num >= 6) //checks if wave height is greater than or equal to six
 		{
 			System.out.println("Great day for surfing!");
 
 		}
-		else if(num > 3) 
+		else if(num > 3) //checks if wave height is greater than three if less than six
 		{
 			
 			System.out.println("Go body boarding!");
 
 		}
-		else if(num >= 0) 
+		else if(num >= 0) //checks if wave height greater than zero if less than three
 		{
 			System.out.println("Go for a swim.");
 
 		}
-		else 
+		else //must be greater than six or less than zero, unusual and informs user
 		{
 			System.out.println("Whoa! What kind of surf is that?");
-
 		}
 		
 		input.close();
