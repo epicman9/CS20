@@ -24,15 +24,15 @@ public class OddSum
 		
 		int bignum = 0;
 		
-		for(int i = 1; i <= num;)
+		for(int i = 1; i <= num;) //goes from 1 to the number entered, skipping even numbers
 		{
 			System.out.println(i);
 			
-			bignum = bignum + i;
+			bignum = bignum + i; //adds current loop number to sum
 			i = i + 2;
 		}
 		
-		System.out.println("The sum is: " + bignum);
+		System.out.println("The sum is: " + bignum); //displays sum
 		
 		input.close();
 	}

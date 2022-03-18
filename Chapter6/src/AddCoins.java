@@ -42,7 +42,14 @@ public class AddCoins {
 	
 		double total = ((pennies + (nickles*5) + (dimes*10) + (quarters*25)));
 		
-		return ("Total: $" + (total/100));
+		if(pennies >= 0 && nickles >= 0 && dimes >= 0 && quarters >= 0) 
+		{
+			return ("Total: $" + (total/100));
+		}
+		else 
+		{
+			return ("Not possible to have negative coins.");
+		}
 	}
 	
 	

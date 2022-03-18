@@ -22,19 +22,19 @@ public class AccountSetup
 		String password = "";
 
 		System.out.println("Enter a username: ");
-		username = input.nextLine();
+		username = input.nextLine(); //asks for user name
 		
 		System.out.println("Enter a password that is at least 8 characters: ");
-		password = input.nextLine();
+		password = input.nextLine(); //asks for password
 		
-		while(password.length() < 8)
+		while(password.length() < 8) //repetedly asks for password until it is 8 characters
 		{
 			System.out.println("Password must be 8 characters. Enter a password that is at least 8 characters: ");
 			password = input.nextLine();
 		}
-		password = password.toLowerCase();
+		password = password.toLowerCase(); //converts password to all lowercase
 
-		System.out.println("Your user name is " + username + " and your password is " + password);
+		System.out.println("Your user name is " + username + " and your password is " + password); //informs user
 
 	}
 

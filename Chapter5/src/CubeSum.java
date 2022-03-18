@@ -22,11 +22,11 @@ public class CubeSum
 		System.out.println("Enter a positive integer: ");
 		num = input.nextInt();
 
-		if(num >= 0)
+		if(num >= 0) //checks if the number is positive
 		{
 		
 			int digitnum = 0;
-			for (int i = 0; Math.pow(10, i) <= num;) 
+			for (int i = 0; Math.pow(10, i) <= num;) //counts the number of digits for the number
 			{
 				digitnum = digitnum + 1;
 				i = i + 1;
@@ -35,19 +35,19 @@ public class CubeSum
 
 			int calculation = 0;
 			int prevnum = 0;
-			for (int i2 = 0; i2 < digitnum;) 
+			for (int i2 = 0; i2 < digitnum;) //goes through each digit in the number, cubes it, then adds it to the overall calculation
 			{
-				calculation = calculation + (int)Math.pow(Math.floor((num%(Math.pow(10, i2 + 1))/Math.pow(10, i2))), 3);
+				calculation = calculation + (int)Math.pow(Math.floor((num%(Math.pow(10, i2 + 1))/Math.pow(10, i2))), 3); //calculation for cubing and adding
 				
 				i2 = i2 + 1;
 			}
 			
-			System.out.println("The sum of the cubes of the digits is: " + calculation);
+			System.out.println("The sum of the cubes of the digits is: " + calculation); //prints result to user
 			
 		}
 		else 
 		{
-			System.out.println("Must be a positive integer");
+			System.out.println("Must be a positive integer"); //informs user number is not positive.
 		}
 
 		input.close();

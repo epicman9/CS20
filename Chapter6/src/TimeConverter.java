@@ -14,7 +14,7 @@ Course: Computer Programming 20
 */
 public class TimeConverter 
 {
-	public static void hoursToMinutes() 
+	public static void hoursToMinutes()
 	{
 		Scanner input = new Scanner(System.in);
 		double num = 0;
@@ -78,7 +78,7 @@ public class TimeConverter
 		System.out.println("Choose what you want to convert: \nIf you want to convert hours to minutes enter 1. \nIf you want to convert days to hours enter 2. \nIf you want to convert minutes to hours enter 3. \nIf you want to convert hours to days enter 4.");
 		num = input.nextInt();
 		
-		while(num < 1 || num > 4) 
+		while(num < 1 || num > 4) //makes sure input is between is 1 and 4
 		{
 			System.out.println("Please enter a number from 1 to 4.");
 			System.out.println("Choose what you want to convert: \nIf you want to convert hours to minutes enter 1. \nIf you want to convert days to hours enter 2. \nIf you want to convert minutes to hours enter 3. \nIf you want to convert hours to days enter 4.");
@@ -86,19 +86,19 @@ public class TimeConverter
 
 		}
 
-		if(num == 1) 
+		if(num == 1) //if one that means they want hours to minutes
 		{
 			hoursToMinutes();
 		}
-		else if(num == 2) 
+		else if(num == 2) //if two that means they want days to hours
 		{
 			daysToHours();
 		}
-		else if(num == 3) 
+		else if(num == 3) //if three that means they want minutes to hours
 		{
 			minutesToHours();
 		}
-		else if(num == 4) 
+		else if(num == 4) //if four that means they want hours to days
 		{
 			hoursToDays();
 		}

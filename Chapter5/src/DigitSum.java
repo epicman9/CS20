@@ -22,11 +22,11 @@ public class DigitSum
 		System.out.println("Enter a positive integer: ");
 		num = input.nextInt();
 
-		if(num >= 0)
+		if(num >= 0) //checks if number is positive
 		{
 		
 			int digitnum = 0;
-			for (int i = 0; Math.pow(10, i) <= num;) 
+			for (int i = 0; Math.pow(10, i) <= num;)  //counts the number of digits
 			{
 				digitnum = digitnum + 1;
 				i = i + 1;
@@ -35,19 +35,19 @@ public class DigitSum
 
 			int calculation = 0;
 			int prevnum = 0;
-			for (int i2 = 0; i2 < digitnum;) 
+			for (int i2 = 0; i2 < digitnum;)  //adds each digit to the overall calculation
 			{
 				calculation = calculation + (int)Math.floor((num%(Math.pow(10, i2 + 1))/Math.pow(10, i2)));
 				
 				i2 = i2 + 1;
 			}
 			
-			System.out.println("The sum of the digits is: " + calculation);
+			System.out.println("The sum of the digits is: " + calculation); //prints result of calculations
 			
 		}
 		else 
 		{
-			System.out.println("Must be a positive integer");
+			System.out.println("Must be a positive integer"); //informs user not positive number
 		}
 
 		input.close();

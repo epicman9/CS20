@@ -14,9 +14,9 @@ public class Evens
 {
 	public static void main(String[] args) 
 	{
-		for(int i = 2; i <= 20;)
+		for(int i = 2; i <= 20;) //starting at two, goes up through each even number until it reaches twenty
 		{
-			System.out.println(i);
+			System.out.println(i); //prints current sum of numbers
 
 			i = i + 2;
 		}

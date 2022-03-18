@@ -24,15 +24,15 @@ public class Numbersum
 		
 		int bignum = 0;
 		
-		for(int i = 1; i <= num;)
+		for(int i = 1; i <= num;) //goes up from one to integer entered
 		{
-			System.out.println(i);
+			System.out.println(i); //prints how many times loop has ran
 			
-			bignum = bignum + i;
+			bignum = bignum + i; //adds amount of times loop has ran to sum
 			i++;
 		}
 		
-		System.out.println("The sum is: " + bignum);
+		System.out.println("The sum is: " + bignum); //prints sum
 		
 		input.close();
 	}

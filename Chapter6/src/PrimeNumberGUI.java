@@ -61,13 +61,17 @@ public class PrimeNumberGUI {
 	
 		boolean bruv;
 		
-		if(num % 2 != 0 && num % 3 != 0 && num % 5 != 0 && num % 7 != 0 && num % 11 != 0 || num == 2 || num == 3 || num == 5 || num == 7 || num == 9 || num == 11) 
+		if (num <= 1) //prime numbers are greater than one, so checks if less than or equal to one
 		{
-			bruv = true;
+			bruv = false; //sets return variable to false
 		}
-		else 
+		else if(num % 2 != 0 && num % 3 != 0 && num % 5 != 0 && num % 7 != 0 && num % 11 != 0 || num == 2 || num == 3 || num == 5 || num == 7 || num == 11) //checks if number evenly divides by any numbers and that it is not 2, 3, 5, 7, or 11
 		{
-			bruv = false;
+			bruv = true; //sets return variable to true
+		}
+		else //otherwise it is not prime
+		{
+			bruv = false; //sets return variable to false
 		}
 		
 		return bruv;
@@ -107,10 +111,9 @@ public class PrimeNumberGUI {
 				
 				int num = 0;
 				
-				num = (int)Integer.parseInt(inp.getText());
-				//System.out.println("The integer is prime: " + isPrime(num));				
+				num = (int)Integer.parseInt(inp.getText()); //gets input
 				
-				out.setText("The integer is prime: " + isPrime(num));
+				out.setText("The integer is prime: " + isPrime(num)); //puts weather input is prime in output label when button pressed
 
 			}
 		});
