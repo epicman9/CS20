@@ -22,7 +22,7 @@ public class TimeConverter
 		System.out.println("Enter a the number of hours: ");
 		num = input.nextDouble();
 
-		double newnum = num * 60;
+		double newnum = num * 60; //multiplies hours by 60 to get minutes
 		System.out.println(num + " hours is equal to " + newnum + " minutes.");
 
 		input.close();
@@ -36,7 +36,7 @@ public class TimeConverter
 		System.out.println("Enter a the number of days: ");
 		num = input.nextDouble();
 
-		double newnum = num * 24;
+		double newnum = num * 24; //multiplies days by 24 to get hours
 		System.out.println(num + " days is equal to " + newnum + " hours.");
 
 		input.close();
@@ -50,7 +50,7 @@ public class TimeConverter
 		System.out.println("Enter a the number of minutes: ");
 		num = input.nextDouble();
 
-		double newnum = num/60;
+		double newnum = num/60;//divides minutes by 60 to get hours
 		System.out.println(num + " minutes is equal to " + newnum + " hours.");
 
 		input.close();
@@ -64,7 +64,7 @@ public class TimeConverter
 		System.out.println("Enter a the number of hours: ");
 		num = input.nextDouble();
 
-		double newnum = num/24;
+		double newnum = num/24; //divides hours by 24 to get days
 		System.out.println(num + " hours is equal to " + newnum + " days.");
 
 		input.close();

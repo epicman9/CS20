@@ -40,9 +40,9 @@ public class AddCoins {
 	public static String getDollarAmount(int pennies, int nickles, int dimes, int quarters) 
 	{
 	
-		double total = ((pennies + (nickles*5) + (dimes*10) + (quarters*25)));
+		double total = ((pennies + (nickles*5) + (dimes*10) + (quarters*25))); //calculates amount of money given pennies, nickles, dimes, and quarters
 		
-		if(pennies >= 0 && nickles >= 0 && dimes >= 0 && quarters >= 0) 
+		if(pennies >= 0 && nickles >= 0 && dimes >= 0 && quarters >= 0) //checks and makes sure no negatives
 		{
 			return ("Total: $" + (total/100));
 		}
@@ -122,9 +122,9 @@ public class AddCoins {
 			{
 				
 				
-				String output = getDollarAmount(Integer.parseInt(pen.getText()), Integer.parseInt(nic.getText()), Integer.parseInt(dim.getText()), Integer.parseInt(Quart.getText()));			
+				String output = getDollarAmount(Integer.parseInt(pen.getText()), Integer.parseInt(nic.getText()), Integer.parseInt(dim.getText()), Integer.parseInt(Quart.getText()));//gets inputs from textboxes and plugs into getdollar amount function to get output		
 				
-				out.setText(output);
+				out.setText(output); //puts output in output textbox
 
 			}
 		});
