@@ -124,7 +124,7 @@ public class AddCoins {
 				
 				String output = getDollarAmount(Integer.parseInt(pen.getText()), Integer.parseInt(nic.getText()), Integer.parseInt(dim.getText()), Integer.parseInt(Quart.getText()));//gets inputs from textboxes and plugs into getdollar amount function to get output		
 				
-				out.setText(output); //puts output in output textbox
+				out.setText(output); //puts output in output textbox.
 
 			}
 		});

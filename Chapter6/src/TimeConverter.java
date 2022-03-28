@@ -106,7 +106,7 @@ public class TimeConverter
 		input.close();
 	}
 }
-/*Screen Dump
+/*Screen Dump.
 
 Choose what you want to convert: 
 If you want to convert hours to minutes enter 1. 
