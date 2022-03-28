@@ -125,6 +125,6 @@ public class PrimeNumberGUI {
 		inp.setBounds(146, 12, 86, 20);
 		Back.add(inp);
 		inp.setColumns(10);
-		
+		//a
 	}
 }
