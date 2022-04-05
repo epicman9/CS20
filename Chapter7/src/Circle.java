@@ -13,6 +13,16 @@ public class Circle
 	{
 		radius = 1; //default radius
 	}
+
+	/**
+	 * constructor
+	 * pre: none
+	 * post: A circle object is created. Radius instantiated to chosen number.
+	*/
+	public Circle(double rad) 
+	{
+		radius = rad; //default radius
+	}
 	
 	
 	/**
@@ -62,4 +72,44 @@ public class Circle
 		circleCircum = PI*radius*2;
 		return(circleCircum);
 	}
+	
+	
+	/**
+	 * Returns the circumference of the circle.
+	 * pre: none
+	 * post: The circumference of the circle has been returned
+	*/	
+	public static void displayAreaFormula()
+	{
+		System.out.println("The formula for the area of a circle is a=Pi*r*r");
+	}
+	
+	
+	/**
+	 * Returns the circumference of the circle.
+	 * pre: none
+	 * post: The circumference of the circle has been returned
+	*/	
+	public boolean equals(Object c)
+	{
+		Circle testObj = (Circle)c;
+		
+		if(testObj.getRadius() == radius) 
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+	
+	public String toString() 
+	{
+		String circleString;
+		
+		circleString = "Circle has radius " + radius;
+		return(circleString);
+	}
+
 }
