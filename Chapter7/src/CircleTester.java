@@ -1,3 +1,15 @@
+/*
+
+Program: CircleTester.java          Last Date of this Revision: April 20th, 2022
+
+Purpose: Create a circle class which has a circumfrence() function, an overloaded constructor that accepts a starting radius, displayAreaFormula() function, and overrides for equals() and toString(). Edit the client code to test this class (this is that edited client code)
+
+Author: Ewan Brady
+School: CHHS
+Course: Computer Programming 20
+  
+
+*/
 public class CircleTester 
 {
 	public static void main(String[] args) 
@@ -18,3 +30,14 @@ public class CircleTester
 
 	}
 }
+/* Screen dump
+
+First Circle has radius 5.0
+Second Circle has radius 5.0
+Third Circle has radius 7.0
+First circle circumference: 31.4159
+The formula for the area of a circle is a=Pi*r*r
+First circle equal to second circle: true
+First circle equal to third circle: false
+
+*/

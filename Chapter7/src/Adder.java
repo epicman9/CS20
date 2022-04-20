@@ -1,3 +1,16 @@
+/*
+
+Program: Adder.java          Last Date of this Revision: April 20th, 2022
+
+Purpose: The Adder game prompts a player for the answer to an addition problem. The Adder game creates a problem from two randomly selected integers between 0 and 20. Adder allows the player three tries to enter a correct answer. If the correct answer is entered on the first try, the player is awarded 5 points. If the correct answer is entered on the second try, 3 points are awarded. The correct answer on the third try it earns one point. if after three tries, the correct answer is still not entered, the player recieves no points and the correct answer is displayed. At the end of the game, Adder displays the player's score. 
+
+Author: Ewan Brady
+School: CHHS
+Course: Computer Programming 20
+  
+
+*/
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -148,11 +161,12 @@ public class Adder {
 				else 
 				{
 					problem.Reroll(); //creates a new problem
-					atemp.setText("Attempts " + problem.getAttempts());
+					
+					atemp.setText("Attempts " + problem.getAttempts()); //sets UI texts.
 					but.setText("Enter");
 					prob.setText(problem.getProblem());
 					
-					nextprob = false;
+					nextprob = false; //is now at a new problem.
 
 				}
 			}

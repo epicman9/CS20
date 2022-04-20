@@ -1,3 +1,15 @@
+/*
+
+Program: CircleTester.java          Last Date of this Revision: April 20th, 2022
+
+Purpose: Create a circle class which has a circumfrence() function, an overloaded constructor that accepts a starting radius, displayAreaFormula() function, and overrides for equals() and toString(). Edit the client code to test this class (this is the class)
+
+Author: Ewan Brady
+School: CHHS
+Course: Computer Programming 20
+  
+
+*/
 public class Circle 
 {
 
