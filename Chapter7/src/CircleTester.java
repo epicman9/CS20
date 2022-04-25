@@ -27,7 +27,6 @@ public class CircleTester
 		Circle.displayAreaFormula();
 		System.out.println("First circle equal to second circle: " + (spot.equals(spot2)));
 		System.out.println("First circle equal to third circle: " + (spot.equals(spot3)));
-
 	}
 }
 /* Screen dump
