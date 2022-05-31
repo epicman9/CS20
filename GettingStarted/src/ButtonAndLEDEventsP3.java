@@ -1,0 +1,79 @@
+//Add Phidgets Library
+import com.phidget22.*;
+
+public class ButtonAndLEDEventsP3 
+{
+    //Turn on/off LEDs with Global Variables
+    static boolean turnRedLEDOn = false;
+    static boolean turnGreenLEDOn = false;
+    static int buttoncount = 0;
+
+    //Handle Exceptions
+    public static void main(String[] args) throws Exception 
+    {
+
+        //Create
+        DigitalInput redButton = new DigitalInput();
+        DigitalInput greenButton = new DigitalInput();
+        DigitalOutput redLED = new DigitalOutput();
+        DigitalOutput greenLED = new DigitalOutput();
+
+        //Address
+        redButton.setHubPort(0);
+        redButton.setIsHubPortDevice(true);
+        greenButton.setHubPort(5);
+        greenButton.setIsHubPortDevice(true);
+        redLED.setHubPort(1);
+        redLED.setIsHubPortDevice(true);
+        greenLED.setHubPort(4);
+        greenLED.setIsHubPortDevice(true);
+
+        
+        //Event 
+        redButton.addStateChangeListener(new DigitalInputStateChangeListener() 
+        {
+            public void onStateChange(DigitalInputStateChangeEvent e) 
+            {
+                //Record button state to turn on/off the red LED
+                if(e.getState() == true) 
+                {
+                	buttoncount++;	
+                }                
+                turnRedLEDOn = e.getState(); 
+            }
+        });
+
+        //Event 
+        greenButton.addStateChangeListener(new DigitalInputStateChangeListener() 
+        {
+            public void onStateChange(DigitalInputStateChangeEvent e) 
+            {
+                //Record button state to turn on/off the green LED
+                turnGreenLEDOn = e.getState();
+                if(e.getState() == true) 
+                {
+                	buttoncount++;	
+                }
+            }
+        });
+
+        //Open
+        redLED.open(1000);
+        greenLED.open(1000);
+        redButton.open(1000);
+        greenButton.open(1000);
+
+        //Use your Phidgets 
+        while(true) 
+        {
+            //turn red LED on based on red button input
+            redLED.setState(turnRedLEDOn);
+            //turn green LED on based on green button input
+            greenLED.setState(turnGreenLEDOn);
+            //sleep for 150 milliseconds 
+            System.out.println(buttoncount); //display info
+
+            Thread.sleep(150);
+        }
+    }
+}
