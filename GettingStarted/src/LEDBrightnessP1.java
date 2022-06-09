@@ -20,6 +20,6 @@ public class LEDBrightnessP1
         //Use your Phidgets with Duty Cycle 
         redLED.setDutyCycle(0.5);
         Thread.sleep(1000);
-        redLED.setDutyCycle(0.0);
+        redLED.setDutyCycle(0.0); //brightness changes, lower values lower brightness
     }
 }
